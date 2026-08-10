@@ -3,7 +3,6 @@
 Site estático que calcula:
 - Back → Lay (fechar trade aberto com lucro)
 - Lay → Back (fechar trade lay aberto)
-- Odd de quebra (análise de lucratividade no longo prazo)
 - Conversor Back ↔ Lay (com comissão da exchange)
 
 Baseado na planilha do Nettuno Trader.
@@ -12,7 +11,6 @@ Baseado na planilha do Nettuno Trader.
 
 1. Preencha Odd Back, Odd Lay e Stake
 2. Resultados aparecem automaticamente
-3. Para análise de odd de quebra: preencha jogos e vitórias
 
 ## Deploy
 

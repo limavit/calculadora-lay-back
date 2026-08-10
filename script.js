@@ -55,24 +55,6 @@ function calcBackLay() {
   lucroLBEl.classList.toggle('negativo', lucroLB < 0);
 }
 
-// === Odd de quebra ===
-function calcQuebra() {
-  const total = parseFloat(document.getElementById('totalJogos').value);
-  const vitorias = parseFloat(document.getElementById('totalVitorias').value);
-
-  if (!isFinite(total) || !isFinite(vitorias) || total <= 0 || vitorias < 0) {
-    document.getElementById('oddQuebra').textContent = '—';
-    document.getElementById('winRate').textContent = '—';
-    return;
-  }
-
-  const oddQuebra = total / vitorias;
-  const winRate = (vitorias / total) * 100;
-
-  document.getElementById('oddQuebra').textContent = oddQuebra.toFixed(3);
-  document.getElementById('winRate').textContent = `${winRate.toFixed(1)}%`;
-}
-
 // === Conversor Back ↔ Lay ===
 function calcConversor(origem) {
   const comissao = parseFloat(document.getElementById('comissao').value) / 100 || 0;
@@ -99,9 +81,6 @@ function calcConversor(origem) {
 
 // === Listeners (atualização em tempo real) ===
 [oddBackEl, oddLayEl, stakeEl].forEach(el => el.addEventListener('input', calcBackLay));
-
-document.getElementById('totalJogos').addEventListener('input', calcQuebra);
-document.getElementById('totalVitorias').addEventListener('input', calcQuebra);
 
 document.getElementById('oddBackConv').addEventListener('input', () => calcConversor('back'));
 document.getElementById('oddLayConv').addEventListener('input', () => calcConversor('lay'));
