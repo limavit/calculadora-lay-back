@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora Lay/Back — Trading Esportivo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <header>
+      <h1>⚡ Calculadora Lay/Back</h1>
+      <p class="subtitle">Trading esportivo — calcule seu lucro/responsabilidade em segundos</p>
+    </header>
+
+    <section class="input-card">
+      <h2>📊 Seus dados</h2>
+      <div class="input-group">
+        <label for="oddBack">Odd do Back (apostar a favor)</label>
+        <input type="number" id="oddBack" step="0.01" min="1.01" placeholder="Ex: 2.40">
+      </div>
+      <div class="input-group">
+        <label for="oddLay">Odd do Lay (apostar contra)</label>
+        <input type="number" id="oddLay" step="0.01" min="1.01" placeholder="Ex: 1.50">
+      </div>
+      <div class="input-group">
+        <label for="stake">Stake (R$)</label>
+        <input type="number" id="stake" step="0.01" min="0.01" placeholder="Ex: 100.00">
+      </div>
+    </section>
+
+    <section class="results-grid">
+      <!-- Back/Lay -->
+      <div class="result-card">
+        <h3>🟢 Fechar Back → Lay</h3>
+        <p class="desc">Você tem Back aberto, vai fechar com Lay</p>
+        <dl>
+          <dt>Rentabilidade:</dt><dd><span id="blRent">—</span></dd>
+          <dt>Lucro garantido:</dt><dd><span id="blLucro">—</span></dd>
+          <dt>Valor no Lay:</dt><dd><span id="blValor">—</span></dd>
+        </dl>
+      </div>
+
+      <!-- Lay/Back -->
+      <div class="result-card">
+        <h3>🔴 Fechar Lay → Back</h3>
+        <p class="desc">Você tem Lay aberto, vai fechar com Back</p>
+        <dl>
+          <dt>Responsabilidade Lay:</dt><dd><span id="lbResp">—</span></dd>
+          <dt>Rentabilidade:</dt><dd><span id="lbRent">—</span></dd>
+          <dt>Lucro garantido:</dt><dd><span id="lbLucro">—</span></dd>
+          <dt>Valor no Back:</dt><dd><span id="lbValor">—</span></dd>
+        </dl>
+      </div>
+    </section>
+
+    <section class="bonus-card">
+      <h2>🎯 Bônus: Análise de Odd de Quebra</h2>
+      <p class="desc">Para saber a odd mínima que você precisa apostar pra ser lucrativo no longo prazo.</p>
+      <div class="input-group-inline">
+        <div class="input-group">
+          <label for="totalJogos">Número de jogos apostados</label>
+          <input type="number" id="totalJogos" min="1" placeholder="Ex: 17">
+        </div>
+        <div class="input-group">
+          <label for="totalVitorias">Número de vitórias</label>
+          <input type="number" id="totalVitorias" min="0" placeholder="Ex: 11">
+        </div>
+      </div>
+      <div class="quebra-result">
+        <div>
+          <strong>Odd de quebra:</strong> <span id="oddQuebra">—</span>
+          <small>(apostar em odds acima disso = lucro no longo prazo)</small>
+        </div>
+        <div>
+          <strong>Win rate necessário:</strong> <span id="winRate">—</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="bonus-card">
+      <h2>🔄 Conversor Back ↔ Lay</h2>
+      <p class="desc">Converte entre odd back e lay considerando a comissão da exchange (Betfair, Betdaq, etc).</p>
+      <div class="input-group">
+        <label for="comissao">Comissão da exchange (%)</label>
+        <input type="number" id="comissao" step="0.1" min="0" max="10" value="5">
+      </div>
+      <div class="input-group-inline">
+        <div class="input-group">
+          <label for="oddBackConv">Odd Back</label>
+          <input type="number" id="oddBackConv" step="0.01" placeholder="Ex: 1.75">
+        </div>
+        <div class="input-group">
+          <label for="oddLayConv">Odd Lay equivalente</label>
+          <input type="number" id="oddLayConv" step="0.01" placeholder="Ex: 2.33">
+        </div>
+      </div>
+      <small class="hint">Digite em um campo — o outro atualiza automaticamente</small>
+    </section>
+
+    <footer>
+      <p>Calculadora baseada na planilha <strong>Cálculos para Trade Esportivo (Nettuno)</strong></p>
+      <p>Inspirado em <a href="https://www.youtube.com/nettunotrader" target="_blank" rel="noopener noreferrer">Nettuno Trader</a></p>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
