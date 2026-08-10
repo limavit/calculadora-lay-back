@@ -13,6 +13,67 @@
       <p class="subtitle">Trading esportivo — calcule seu lucro/responsabilidade em segundos</p>
     </header>
 
+    <details class="bonus-card help-card" open>
+      <summary><h2 style="display:inline">📖 Como usar</h2></summary>
+
+      <div class="help-content">
+        <p class="help-intro">A calculadora atualiza <strong>em tempo real</strong> conforme você digita. Sem botões, sem reload.</p>
+
+        <h3>1️⃣ Preencha os 3 campos principais</h3>
+        <ul>
+          <li><strong>Odd do Back</strong> — odd em que você apostou a favor (ou que pretende apostar)</li>
+          <li><strong>Odd do Lay</strong> — odd em que você apostou contra (ou que pretende apostar)</li>
+          <li><strong>Stake</strong> — valor que você apostou (ou pretende apostar) em R$</li>
+        </ul>
+
+        <h3>2️⃣ Leia os resultados</h3>
+        <div class="help-grid">
+          <div>
+            <h4>🟢 Fechar Back → Lay</h4>
+            <p>Você tem um <strong>Back aberto</strong> e quer travar lucro fazendo um Lay agora.</p>
+            <ul>
+              <li><strong>Rentabilidade:</strong> % de lucro sobre o stake</li>
+              <li><strong>Lucro garantido:</strong> quanto você ganha se fechar agora</li>
+              <li><strong>Valor no Lay:</strong> quanto colocar no Lay pra travar</li>
+            </ul>
+          </div>
+          <div>
+            <h4>🔴 Fechar Lay → Back</h4>
+            <p>Você tem um <strong>Lay aberto</strong> e quer travar fazendo um Back agora.</p>
+            <ul>
+              <li><strong>Responsabilidade:</strong> quanto você PODE perder se o evento acontecer</li>
+              <li><strong>Rentabilidade:</strong> % de lucro sobre a responsabilidade</li>
+              <li><strong>Lucro garantido:</strong> quanto você ganha se fechar agora</li>
+              <li><strong>Valor no Back:</strong> quanto colocar no Back pra travar</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3>3️⃣ Use o conversor (opcional)</h3>
+        <p>Converte entre Odd Back e Odd Lay considerando a <strong>comissão da exchange</strong> (Betfair padrão: 5%). Digite em um dos campos — o outro atualiza sozinho.</p>
+
+        <h3>💡 Exemplo prático</h3>
+        <div class="example">
+          <p><strong>Cenário:</strong> você fez Lay de R$2,80 a odd 36 (apostou que algo NÃO acontece).</p>
+          <p><strong>Preencha:</strong> Odd Lay = 36, Stake = 2.80. Acompanhe a <strong>responsabilidade</strong> (R$98,00) e mude a <strong>Odd Back</strong> pra simular diferentes pontos de saída:</p>
+          <ul>
+            <li>Back a 30 → lucro <span class="neg-text">-R$0,56</span> (prejuízo, melhor segurar)</li>
+            <li>Back a 36 → lucro R$0,00 (break even)</li>
+            <li>Back a 38 → lucro <span class="pos-text">+R$0,21</span> ✅</li>
+            <li>Back a 45 → lucro <span class="pos-text">+R$0,49</span> ✅</li>
+          </ul>
+        </div>
+
+        <h3>⚠️ Dicas</h3>
+        <ul>
+          <li><strong>Lucro verde</strong> = positivo (fechar agora é vantajoso)</li>
+          <li><strong>Lucro vermelho</strong> = negativo (fechar agora dá prejuízo, melhor esperar)</li>
+          <li>Para <strong>travar lucro</strong>: a odd precisa estar favorável (Back alta pra fechar trade lay, ou Lay baixa pra fechar trade back)</li>
+          <li>Os cálculos não incluem a comissão da exchange no lucro final — desconte manualmente (~2-5%)</li>
+        </ul>
+      </div>
+    </details>
+
     <section class="input-card">
       <h2>📊 Seus dados</h2>
       <div class="input-group">
