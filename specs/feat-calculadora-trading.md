@@ -406,7 +406,7 @@ HTML + CSS + JS vanilla. Zero build. Cálculo 100% client-side.
 - **NÃO mexer** em código de outros projetos
 - **NÃO usar frameworks** (React, Vue, etc) — vanilla pra ficar leve
 - **NÃO adicionar backend** — tudo client-side
-- **NÃO commitar** o PAT do GitHub
+- **NÃO commitar** credenciais GitHub
 - **NÃO fazer push** antes do Vitor revisar a URL
 
 ---
@@ -420,7 +420,7 @@ HTML + CSS + JS vanilla. Zero build. Cálculo 100% client-side.
 
 **Deploy (depois do Vitor aprovar):**
 1. Vitor cria repo `limavit/calculadora-lay-back` (privado) no GitHub
-2. Push via PAT (NUNCA imprimir o token)
+2. Push via credencial GitHub (use variável de ambiente, nunca imprima)
 3. Conectar repo na Vercel
 4. URL pública: `https://calculadora-lay-back.vercel.app`
 
