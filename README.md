@@ -5,8 +5,6 @@ Site estático que calcula:
 - Lay → Back (fechar trade lay aberto)
 - Conversor Back ↔ Lay (com comissão da exchange)
 
-Baseado na planilha do Nettuno Trader.
-
 ## Como usar
 
 1. Preencha Odd Back, Odd Lay e Stake
